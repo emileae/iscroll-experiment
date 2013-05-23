@@ -20,10 +20,10 @@ body {
 
 .frame {
     position:absolute;
-    top:30px;
-    right:50px;
-    bottom:20px;
-    left:50px;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
     background-color: #F1F2F2;
     border: 1px solid #BCBEC0;
     border-radius: 4px;
@@ -32,8 +32,10 @@ body {
 .page {
     float: left;
     -webkit-transform:translate3d(0,0,0);
+    -moz-transform:translate3d(0px,0,0);
     height: 100%;
     padding: 20px;
+    margin: 10px;/*my addition*/
 }
 
 #pageWrapper {
@@ -41,16 +43,57 @@ body {
     z-index:1;
     overflow:hidden;
     top:20px;
-    right:20px;
+    right:0px;
     bottom:20px;
-    left:20px;
+    left:0px;
+    padding: 20px;/*my addition*/
 }
 
 #wrapper {
     position:absolute;
     z-index:1;
     top:0px;
-    bottom:0px;
+    bottom:50px;
+    left:0px;
+    right:0px;
+    overflow:auto;
+}
+
+#wrapper_pg2{
+    position:absolute;
+    z-index:1;
+    top:0px;
+    bottom:50px;/*having a higher bottom position means that the scroll area allows the text to go a little above the 0 bottom position*/
+    left:0px;
+    right:0px;
+    overflow:auto;
+}
+
+#wrapper_pg3{
+    position:absolute;
+    z-index:1;
+    top:0px;
+    bottom:50px;
+    left:0px;
+    right:0px;
+    overflow:auto;
+}
+
+#wrapper_pg4{
+    position:absolute;
+    z-index:1;
+    top:0px;
+    bottom:50px;
+    left:0px;
+    right:0px;
+    overflow:auto;
+}
+
+#wrapper_pg5{
+    position:absolute;
+    z-index:1;
+    top:0px;
+    bottom:50px;
     left:0px;
     right:0px;
     overflow:auto;

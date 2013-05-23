@@ -1,0 +1,21 @@
+notes: iScroll lib for mobile UI
+
+-to prevent page fromscrolling out of view, set bottom position and maybe also adjust it so that none of the page is hidden
+
+-need to initialize each iscroll with a unique var ID and give each scroll wrapper element a unique ID
+
+-check if .page class is required for iScroll
+
+-check if .scroller class is required for iScroll (I think YES)
+
+-works with iScroll4 and Zepto
+
+-need to fix the app when phone goes to sleep mode... the layout breaks, scrolling stops... maybe simplest is to prevent sleep mode using phonegap
+
+-iSCroll lock direction stops horizontal movement when it detects vertical touch gesture like scrolling up/down
+
+-need to figure out how to add widgets, like 3D rotator and video(try video.js)
+
+-SNAP-TO-ELEMENT works as follows: iScroll subdivides the "scroller" into "quadrants" or "pages" the same size as the wrapper.
+
+-NBNB Need to adjust the #pageScroller width by setting the number of pages * wrapperWidth
