@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
 
-document.addEventListener("orientationchange", updateLayout);
+//document.addEventListener("orientationchange", updateLayout);
+
 /*
 $('body').on('touchstart mousedown', function(){
     var page_Scroller = $('#pageScroller').position()

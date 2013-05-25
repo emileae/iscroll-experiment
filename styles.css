@@ -40,6 +40,12 @@ body {
     margin: 10px;/*my addition*/
 }
 
+.wrapper_span_360sprite2
+{
+height: 327px;
+display: inline-block;
+}
+
 #pageWrapper {
     position:absolute;
     z-index:1;
