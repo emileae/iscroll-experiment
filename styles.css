@@ -1,6 +1,8 @@
 body {
     font-family: helvetica neue;
     background-color: #E7EAEC;
+    margin:0;
+    padding:0;
 }
 
 .page h1,
@@ -25,8 +27,8 @@ body {
     bottom:0px;
     left:0px;
     background-color: #F1F2F2;
-    border: 1px solid #BCBEC0;
-    border-radius: 4px;
+    /*border: 1px solid #BCBEC0;
+    border-radius: 4px;*/
 }
 
 .page {
@@ -42,11 +44,11 @@ body {
     position:absolute;
     z-index:1;
     overflow:hidden;
-    top:20px;
+    top:0px;/*was 20px*/
     right:0px;
-    bottom:20px;
+    bottom:0px;/*was 20px*/
     left:0px;
-    padding: 20px;/*my addition*/
+    /*padding: 20px;/*my addition*/
 }
 
 #wrapper {
@@ -90,6 +92,16 @@ body {
 }
 
 #wrapper_pg5{
+    position:absolute;
+    z-index:1;
+    top:0px;
+    bottom:50px;
+    left:0px;
+    right:0px;
+    overflow:auto;
+}
+
+#wrapper_pg6{
     position:absolute;
     z-index:1;
     top:0px;

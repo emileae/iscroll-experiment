@@ -1,3 +1,6 @@
+$(document).ready(function(){
+
+
 document.addEventListener("orientationchange", updateLayout);
 
 // The wrapperWidth before orientationChange. Used to identify the current page number in updateLayout();
@@ -8,8 +11,8 @@ var myScroll = new iScroll('pageWrapper', {
 	momentum: false,
 	hScrollbar: false,
 	vScrollbar: false,
-    lockDirection: true});
-
+    lockDirection: true
+});
     
 updateLayout();
 
@@ -24,13 +27,73 @@ function updateLayout() {
     wrapperWidth = $('#pageWrapper').width();
 
     $('#pageScroller').css('width', wrapperWidth * 7);
-    $('.page').css('width', wrapperWidth - 65);//was - 40 // working out the .page width its simply the wrapper width - the padding and margins I think
+    $('.page').css('width', wrapperWidth - 60);//was - 40 // working out the .page width its simply the wrapper width - the padding and margins I think
     myScroll.refresh();
     myScroll.scrollToPage(currentPage, 0, 0);
-}
 
-page2Scroll = new iScroll('wrapper_pg2', {hScrollbar: false, vScrollbar: false, lockDirection: true });
+};
+
+page2Scroll = new iScroll('wrapper_pg2', {hScrollbar: false, vScrollbar: true, lockDirection: true });
 page3aScroll = new iScroll('wrapper_pg3', {hScrollbar: false, vScrollbar: true, lockDirection: true });
-page4Scroll = new iScroll('wrapper_pg4', {hScrollbar: false, vScrollbar: false, lockDirection: true });
-page5Scroll = new iScroll('wrapper_pg5', {hScrollbar: false, vScrollbar: false, lockDirection: true });
-page3Scroll = new iScroll('wrapper', {hScrollbar: false, vScrollbar: false, lockDirection: true });
+page4Scroll = new iScroll('wrapper_pg4', {hScrollbar: false, vScrollbar: true, lockDirection: true });
+page5Scroll = new iScroll('wrapper_pg5', {hScrollbar: false, vScrollbar: true, lockDirection: true });
+page6Scroll = new iScroll('wrapper_pg6', {hScrollbar: false, vScrollbar: true, lockDirection: true });
+//page3Scroll = new iScroll('wrapper', {hScrollbar: false, vScrollbar: true, lockDirection: true });
+
+/*SPRITESPIN*/
+
+$(function(){
+      
+      $("#360sprite").spritespin({
+        width     : 480,
+        height    : 327,
+        frames    : 34,
+        framesX   : 6,
+        behavior  : "drag",
+        module    : "360",
+        sense     : -1,
+        source    : "images/bike6x6.jpg",
+        animate   : true,
+        loop      : false,
+        frameWrap : true,
+        frameTime : 60,
+        enableCanvas : false
+      });
+      
+      $("#360sprite2").spritespin({
+        width     : 480,
+        height    : 327,
+        frames    : 34,
+        framesX   : 6,
+        behavior  : "drag",
+        module    : "360",
+        sense     : -1,
+        source    : "images/bike6x6.jpg",
+        animate   : true,
+        loop      : false,
+        frameWrap : true,
+        frameTime : 60,
+        enableCanvas : false,
+        preloadCss: "position: relative; display: block;"
+      });
+      $("#360sprite3").spritespin({
+        width     : 480,
+        height    : 327,
+        frames    : 34,
+        framesX   : 6,
+        behavior  : "drag",
+        module    : "360",
+        sense     : -1,
+        source    : "images/bike6x6.jpg",
+        animate   : true,
+        loop      : false,
+        frameWrap : true,
+        frameTime : 60,
+        enableCanvas : false,
+        preloadCss: "position: relative; display: block;"
+      });
+
+    });
+
+
+});
