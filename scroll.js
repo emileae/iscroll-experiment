@@ -3,6 +3,18 @@ $(document).ready(function(){
 
 document.addEventListener("orientationchange", updateLayout);
 
+$('body').on('touchstart mousedown', function(){
+    var page_Scroller = $('#pageScroller').position()
+    $('#measure').text(page_Scroller.left);
+});
+
+$('#360sprite2').on('touchstart mousedown', function(){
+    myScroll.disable()
+});
+$('#360sprite2').on('touchend mouseup', function(){
+    myScroll.enable()
+});
+
 // The wrapperWidth before orientationChange. Used to identify the current page number in updateLayout();
 wrapperWidth = 0;
 
