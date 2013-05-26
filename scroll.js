@@ -5,6 +5,34 @@ $(document).ready(function(){//replaced with deviceready phonegap function
 
 //document.addEventListener("orientationchange", updateLayout);
 
+// Handling a form submission
+    $('body').on('tap click', '.button_popup', function (){
+        $('#form_popup').show();
+    });
+    $('body').on('tap click', '#form_popup', function (){
+        $('#form_popup').hide();
+    });
+    
+    
+    $('#pg_request_form').submit(function(){
+        var email = $('#pg_email').val();
+        $.ajax({
+            type: 'POST',
+            data: {email:email},
+            url: 'http://e-m-i-l-e.appspot.com/pg_request',
+            success: function(data){
+                console.log(data);
+                alert('Your comment was successfully added');
+            },
+            error: function(data){
+                console.log(data);
+                alert('There was an error adding your comment');
+            }
+        });
+        return false;
+    });
+
+
 /*
 $('body').on('touchstart mousedown', function(){
     var page_Scroller = $('#pageScroller').position()
@@ -67,7 +95,7 @@ page6Scroll = new iScroll('wrapper_pg6', {hScrollbar: false, vScrollbar: true, l
 
 $(function(){
       
-      $("#360sprite").spritespin({
+      /*$("#360sprite").spritespin({
         width     : 480,
         height    : 327,
         frames    : 34,
@@ -81,7 +109,7 @@ $(function(){
         frameWrap : true,
         frameTime : 60,
         enableCanvas : false
-      });
+      });*/
       
       $("#360sprite2").spritespin({
         width     : 480,

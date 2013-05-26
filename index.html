@@ -158,10 +158,9 @@
                 </div>
                 <div class="page" >
                     <div style="width:100%;text-align:center;">
-                        <h1>Page 4</h1>
+                        <h1>Form submission</h1>
                         <hr/>
-                        <strong>360 spin with 1 sprite / 36 frames</strong>
-                        <div id="360sprite"></div>
+                        <a href="#" class="button_popup">Click to submit form</a>
                     </div>
                 </div>
                 
@@ -170,7 +169,21 @@
 
     </div>
     
+<div id="form_popup">
+    <div id="form_well">
+    <form action="/pg_request" method="post" id="pg_request_form">
 
+        <label for="email">
+            <b>Email</b>
+            <input type="email" id="pg_email" name="email">
+        </label>
+        
+        <input type="submit" value="submit">
+
+    </form>
+    </div>
+</div>
+    
     <!--<strong>360 spin with 1 sprite / 36 frames</strong>
     <div id="360sprite"></div>-->
     
