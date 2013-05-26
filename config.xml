@@ -20,6 +20,4 @@
     
     <icon src="app_icon.png" />
     
-    <gap:splash src="splash.png" width="320" height="480"/>
-    
 </widget>
