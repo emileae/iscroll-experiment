@@ -1,4 +1,6 @@
-$(document).ready(function(){
+//$(document).ready(function(){//replaced with deviceready phonegap function
+
+document.addEventListener("deviceready", function(){
 
 
 //document.addEventListener("orientationchange", updateLayout);
@@ -110,3 +112,5 @@ $(function(){
 
 
 });
+
+
