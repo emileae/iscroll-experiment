@@ -18,6 +18,13 @@ $('#360sprite2').on('touchend mouseup', function(){
     myScroll.enable()
 });
 
+$('#pinch_zoom_pic').on('touchstart mousedown', function(){
+    myScroll.disable()
+});
+$('#pinch_zoom_pic').on('touchend mouseup', function(){
+    myScroll.enable()
+});
+
 // The wrapperWidth before orientationChange. Used to identify the current page number in updateLayout();
 wrapperWidth = 0;
 
@@ -48,7 +55,8 @@ function updateLayout() {
 
 };
 
-page2Scroll = new iScroll('wrapper_pg2', {hScrollbar: false, vScrollbar: true, lockDirection: true });
+//page2Scroll = new iScroll('wrapper_pg2', {hScrollbar: false, vScrollbar: true, lockDirection: true });
+page2Scroll = new iScroll('wrapper_pg2', {zoom: true});
 page3aScroll = new iScroll('wrapper_pg3', {hScrollbar: false, vScrollbar: true, lockDirection: true });
 page4Scroll = new iScroll('wrapper_pg4', {hScrollbar: false, vScrollbar: true, lockDirection: true });
 page5Scroll = new iScroll('wrapper_pg5', {hScrollbar: false, vScrollbar: true, lockDirection: true });
