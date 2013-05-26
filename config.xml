@@ -17,5 +17,9 @@
     
     <preference name="orientation" value="landscape" />
     <preference name="phonegap-version" value="2.7.0" />
-
+    
+    <icon src="app_icon.png" />
+    
+    <gap:splash src="splash.png" />
+    
 </widget>
