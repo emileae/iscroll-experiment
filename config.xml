@@ -20,4 +20,6 @@
     
     <icon src="app_icon.png" />
     
+    <access origin="*" />
+    
 </widget>
