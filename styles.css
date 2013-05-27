@@ -38,10 +38,13 @@ display: none;
 }
 #form_close
 {
-position: relative;
+position: absolute;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 100%;
 background-color: rgba(0,0,0,0.5);
 z-index: 200;
-padding: 10px;
 }
 #form_well
 {
@@ -50,7 +53,11 @@ background-color: rgb(0,0,0);
 z-index: 201;
 display: none;
 color: white;
-position: relative;
+position: absolute;
+top: 20%;
+left: 20%;
+width: 60%;
+height: 10%;
 }
 
 .page {
