@@ -8,11 +8,12 @@ $(document).ready(function(){//replaced with deviceready phonegap function
 // Handling a form submission
     $('body').on('tap click', '.button_popup', function (){
         myScroll.disable()
-        $('#form_popup').show();
+        //$('#form_popup').show();
+        alert('yoyo')
     });
     $('body').on('tap click', '#form_overlay', function (){
         myScroll.enable()
-        $('#form_popup').hide();
+        //$('#form_popup').hide();
     });
     
     
