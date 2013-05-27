@@ -5,6 +5,12 @@ $(document).ready(function(){//replaced with deviceready phonegap function
 
 //document.addEventListener("orientationchange", updateLayout);
 
+//Prevent back button from working??
+$('.page').on('backbutton',
+     function(e){
+         e.preventDefault();
+});
+
 // Handling a form submission
     $('body').on('tap click', '.button_popup', function (){
         myScroll.disable()
