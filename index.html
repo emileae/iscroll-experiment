@@ -160,7 +160,23 @@
                     <div style="width:100%;text-align:center;">
                         <h1>Form submission</h1>
                         <hr/>
-                        <a href="#" class="button_popup">Click to submit form</a>
+                        <button class="button_popup">Click to submit form</button>
+                        <!--<div id="form_popup">
+                            <div id="form_overlay">
+                            </div>-->
+                            <div id="form_well">
+                            <form action="/pg_request" method="post" id="pg_request_form">
+
+                                <label for="email">
+                                    <b>Email</b>
+                                    <input type="email" id="pg_email" name="email">
+                                </label>
+                                
+                                <input type="submit" value="submit">
+
+                            </form>
+                            </div>
+                        <!--</div>-->
                     </div>
                 </div>
                 
