@@ -11,12 +11,26 @@ $('.page').on('backbutton',
          e.preventDefault();
 });
 
+// handling the cover page
+var $cover_img = $('.cover_img');
+var $cover_div = $('.cover_div');
+    
+    $cover_img.css('width', $(window).width());
+    // just playing with one images' position
+    /*
+    $cover_img.css('position', 'relative');
+    $cover_img.css('top', '-1200px');
+    */
+   
+    $cover_div.css('width', $(window).width());
+    $cover_div.css('height', $(window).height());
+    $cover_div.css('overflow', 'hidden');
+
 // Handling a form submission
     $('body').on('tap click', '.button_popup', function (){
         myScroll.disable()
         $('#form_well').show();
         $('#form_popup').show();
-        //alert('yoyo')
     });
     $('body').on('tap click', '#form_close', function (){
         myScroll.enable()
@@ -49,6 +63,7 @@ $('body').on('touchstart mousedown', function(){
     $('#measure').text(page_Scroller.left);
 });*/
 
+// handling other touch events within scroller 3D rotator and pinch zoom
 $('#360sprite2').on('touchstart mousedown', function(){
     myScroll.disable()
 });
@@ -60,6 +75,15 @@ $('#pinch_zoom_pic').on('touchstart mousedown', function(){
     myScroll.disable()
 });
 $('#pinch_zoom_pic').on('touchend mouseup', function(){
+    myScroll.enable()
+});
+
+$('.zoom_container').on('touchstart mousedown', function(){
+    page7Scroll.enable()
+    myScroll.disable()
+});
+$('.zoom_container').on('touchend mouseup', function(){
+    page7Scroll.disable()
     myScroll.enable()
 });
 
@@ -99,6 +123,8 @@ page3aScroll = new iScroll('wrapper_pg3', {hScrollbar: false, vScrollbar: true, 
 page4Scroll = new iScroll('wrapper_pg4', {hScrollbar: false, vScrollbar: true, lockDirection: true });
 page5Scroll = new iScroll('wrapper_pg5', {hScrollbar: false, vScrollbar: true, lockDirection: true });
 page6Scroll = new iScroll('wrapper_pg6', {hScrollbar: false, vScrollbar: true, lockDirection: true });
+page7Scroll = new iScroll('wrapper_pg7', {zoom: true, hScrollbar: false, vScrollbar: false});
+page7Scroll.disable()// disable pinch area within scroll area only enable when in use
 //page3Scroll = new iScroll('wrapper', {hScrollbar: false, vScrollbar: true, lockDirection: true });
 
 /*SPRITESPIN*/
