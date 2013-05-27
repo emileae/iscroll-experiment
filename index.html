@@ -161,22 +161,22 @@
                         <h1>Form submission</h1>
                         <hr/>
                         <button class="button_popup">Click to submit form</button>
-                        <!--<div id="form_popup">
-                            <div id="form_overlay">
-                            </div>-->
+                        <div id="form_popup">
                             <div id="form_well">
-                            <form action="/pg_request" method="post" id="pg_request_form">
-
-                                <label for="email">
-                                    <b>Email</b>
-                                    <input type="email" id="pg_email" name="email">
-                                </label>
+                            
+                                <form action="/pg_request" method="post" id="pg_request_form">
+                                    <label for="email">
+                                        <b>Email</b>
+                                        <input type="email" id="pg_email" name="email">
+                                    </label>
+                                    <input type="submit" value="submit">
+                                </form>
                                 
-                                <input type="submit" value="submit">
-
-                            </form>
                             </div>
-                        <!--</div>-->
+                            <div id="form_close">
+                                HIDE
+                            </div>
+                        </div>
                     </div>
                 </div>
                 

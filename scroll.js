@@ -9,10 +9,10 @@ $(document).ready(function(){//replaced with deviceready phonegap function
     $('body').on('tap click', '.button_popup', function (){
         myScroll.disable()
         $('#form_well').show();
-        //$('#form_popup').show();
-        alert('yoyo')
+        $('#form_popup').show();
+        //alert('yoyo')
     });
-    $('body').on('tap click', '#form_overlay', function (){
+    $('body').on('tap click', '#form_close', function (){
         myScroll.enable()
         $('#form_popup').hide();
     });

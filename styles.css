@@ -31,32 +31,26 @@ body {
     border-radius: 4px;*/
 }
 
-/*
+
 #form_popup
 {
 display: none;
 }
-#form_overlay
+#form_close
 {
-position: absolute;
-top: 0px;
-left: 0px;
-height: 100%;
-width: 100%;
+position: relative;
 background-color: rgba(0,0,0,0.5);
 z-index: 200;
-}*/
+padding: 10px;
+}
 #form_well
 {
 padding: 10px;
 background-color: rgb(0,0,0);
 z-index: 201;
-position:relative;
 display: none;
 color: white;
-/*position: absolute;
-top: 50px;
-left:50px;*/
+position: relative;
 }
 
 .page {
